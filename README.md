@@ -1,20 +1,39 @@
 # Memory Game Project
 
 ## Table of Contents
+* game description
+* list of code dependencies 
 
-* [Instructions](#instructions)
-* [Contributing](#contributing)
 
-## Instructions
 
-The starter project has some HTML and CSS styling to display a static version of the Memory Game project. You'll need to convert this project from a static project to an interactive one. This will require modifying the HTML and CSS files, but primarily the JavaScript file.
 
-To get started, open `js/app.js` and start building out the app's functionality
 
-For specific, detailed instructions, look at the project instructions in the [Udacity Classroom](https://classroom.udacity.com/me).
+## game description
+This game of memory is done every time to arrange pictures randomly and after the time is displayed to solve the puzzle and the number of stars you got and asked if you like to play again or not if you want to play will start again
+The game displays the number of clicks you have made
+Stars are smaller as the number of clicks increases
+There is a reloading of the game if you want to run it again.
 
-## Contributing
+## list of code dependencies 
+1-make design whith js code  then add to him events 
+2-In order to use TIMER you must download this library and
+    Include this code in the html file
+      <script src="js/easytimer.min.js"> </script>
+3-to make animations must download animate.css-master file then make items you want to animate with class 
+ class= "animated infinite tada"
+4-to Arrange images randomly pass array of image to this functio
+      function shuffle(array) {
+    var currentIndex = array.length, temporaryValue, randomIndex;
 
-This repository is the starter code for _all_ Udacity students. Therefore, we most likely will not accept pull requests.
+    while (currentIndex !== 0) {
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex -= 1;
+        temporaryValue = array[currentIndex];
+        array[currentIndex] = array[randomIndex];
+        array[randomIndex] = temporaryValue;
+    }
 
-For details, check out [CONTRIBUTING.md](CONTRIBUTING.md).
+    return array;
+}
+
+
